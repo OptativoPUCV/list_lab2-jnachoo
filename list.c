@@ -47,7 +47,7 @@ void * nextList(List * list) {
   
   Node* aux =malloc(sizeof(Node));
    aux=list->current; 
-   if(aux == NULL)return NULL;
+   if(list->current == NULL)return NULL;
   list->current=aux->next;
     return (int*)(list->current->data);
 }
