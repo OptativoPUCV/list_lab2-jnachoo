@@ -54,11 +54,6 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-  Node *puntero = list->head;
-  while(puntero->next)
-  {
-    puntero=puntero->next;
-  }
 
   list->current=list->head->prev;
     return NULL;
