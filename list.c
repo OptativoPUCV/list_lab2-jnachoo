@@ -47,9 +47,9 @@ void * nextList(List * list) {
   /*int *j = malloc(sizeof(int)*10);
   Node* aux =createNode(j);
    aux=list->current; */
-   Node *aux=list->current;
+   //Node *aux=list->current;
    if(list->current == NULL)return NULL;
-  list->current=aux->next;
+  list->current=list->current->next;
     return (int*)(list->current->data);
 }
 
