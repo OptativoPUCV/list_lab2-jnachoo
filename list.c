@@ -43,8 +43,8 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  if(list->head->next == NULL)return NULL;
-  list->current=list->head->next;
+  if(list->head == NULL)return NULL;
+  list->current=list->current->next;
     return (int*)(list->current->data);
 }
 
@@ -54,6 +54,12 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
+  Node *puntero = list->head;
+  while(puntero->next)
+  {
+    puntero=puntero->next;
+  }
+
   list->current=list->head->prev;
     return NULL;
 }
