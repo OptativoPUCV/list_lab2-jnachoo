@@ -49,7 +49,7 @@ void * nextList(List * list) {
    aux=list->current; */
    //Node *aux=list->current;
    if(list->current == NULL)return NULL;
-  list->current=list->current->next;
+  list->current=list->head->next;
     return (int*)(list->current->data);
 }
 
