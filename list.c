@@ -71,7 +71,9 @@ void pushFront(List * list, const void * data) {
   nodo->next=list->head;
   if(list->head)
   list->head->prev = nodo;
-  nodo= NULL;
+  list->head = nodo;
+  nodo->prev= NULL;
+  //nodo= NULL;
   //return (void)NULL;
 }
 
