@@ -48,7 +48,7 @@ void * nextList(List * list) {
   Node* aux =createNode(j);
    aux=list->current; */
    //Node *aux=list->current;
-   if(list->current == NULL)return NULL; // current no head
+   if(list->current == NULL)return NULL; // cgracias de nada :3
    if(list->current->next == NULL)return NULL;
   list->current=list->current->next;
     return (int*)(list->current->data);
@@ -60,9 +60,10 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-
-  list->current=list->head->prev;
-    return NULL;
+  if(list->current == NULL)return NULL;
+  if(list->current->prev == NULL)return NULL;
+  list->current=list->current->prev;
+    return (int*)(list->current->data);
 }
 
 void pushFront(List * list, const void * data) {
