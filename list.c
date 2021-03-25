@@ -48,8 +48,8 @@ void * nextList(List * list) {
   Node* aux =createNode(j);
    aux=list->current; */
    //Node *aux=list->current;
-   if(list->head->next == NULL)return NULL;
-  list->current=list->head->next;
+   if(list->current->next == NULL)return NULL;
+  list->current=list->current->next;
     return (int*)(list->current->data);
 }
 
