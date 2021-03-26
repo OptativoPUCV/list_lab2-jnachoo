@@ -112,14 +112,7 @@ void pushCurrent(List * list, const void * data) {
   }
   else
   {
-    if(list->current == list->head)
-    {
-      printf("*ENTRO2*");
-      //firstList(list);
-      pushFront(list,data);
-    }
-    else
-    {
+    
       printf("*ENTRO3*");
       nodo->next= list->current;
       
@@ -128,7 +121,7 @@ void pushCurrent(List * list, const void * data) {
       //list->current->prev=nodo;
       //list->current->prev->prev=nodo;
       list->current=nodo;
-    }
+    
   }
  
 }
