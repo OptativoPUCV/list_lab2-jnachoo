@@ -75,8 +75,9 @@ void pushFront(List * list, const void * data) {
     list->head->prev = nodo;
     list->tail = nodo;
     list->head = nodo;
+    nodo->prev = NULL;
     printf("*ENTRO*");
-  }
+  }/*
   else
   {
     list->head=nodo;
@@ -84,7 +85,7 @@ void pushFront(List * list, const void * data) {
     list->head->prev=NULL;
     list->tail = list->head;
     printf("*ENTRO*23");
-  }
+  }*/
   /*else
   {
     list->tail->next=nodo;
