@@ -496,3 +496,9 @@ Fri Mar 26 18:38:16 UTC 2021:
  tests:  10|2
 total_score: 45/70
 fac62c2
+Fri Mar 26 18:41:47 UTC 2021: 
+ list.c | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+ tests:  10|2
+total_score: 45/70
+78ae82a
