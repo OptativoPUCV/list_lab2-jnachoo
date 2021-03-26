@@ -83,6 +83,7 @@ void pushFront(List * list, const void * data) {
       list->head->prev = nodo;
       list->tail = nodo;
       list->head = nodo;
+      printf("*ENTRO*23");
   }
   /*else
   {
