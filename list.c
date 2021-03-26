@@ -92,7 +92,7 @@ void pushFront(List * list, const void * data) {
   }*/
   
 
-  if(list->head == list->tail)//printf("cola y cabeza ==");
+  ///if(list->head == list->tail)//printf("cola y cabeza ==");
   
   nodo->prev= NULL;
   //return (void)NULL;*/
