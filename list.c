@@ -70,19 +70,19 @@ void pushFront(List * list, const void * data) {
   Node *nodo = createNode(data);
   if(list->head!=NULL)
   {
-    list->head=nodo;
-    list->head->next=NULL;
-    list->head->prev=NULL;
-    list->tail = list->head;
-    //printf("*ENTRO*");
-  }
-  else
-  {
     nodo->next=list->head;
      if(list->head)
     list->head->prev = nodo;
     list->tail = nodo;
     list->head = nodo;
+    //printf("*ENTRO*");
+  }
+  else
+  {
+    list->head=nodo;
+    list->head->next=NULL;
+    list->head->prev=NULL;
+    list->tail = list->head;
     //printf("*ENTRO*23");
   }
   /*else
@@ -92,7 +92,7 @@ void pushFront(List * list, const void * data) {
     nodo->prev=list->tail;
     list->tail=nodo;
   }*/
-  
+    
 
   ///if(list->head == list->tail)//printf("cola y cabeza ==");
   
