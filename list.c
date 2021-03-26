@@ -81,7 +81,7 @@ void pushFront(List * list, const void * data) {
     list->head = nodo;
     nodo->prev = NULL;
     printf("*ENTRO*");
-  ///if(list->head == list->tail)//printf("cola y cabeza ==");
+  if(list->head == list->tail)printf("cola y cabeza ==");
   
  // nodo->prev= NULL;
   //return (void)NULL;*/
