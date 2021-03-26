@@ -68,16 +68,17 @@ void * prevList(List * list) {
 
 void pushFront(List * list, const void * data) {
   Node *nodo = createNode(data);
-  if(list->head!=NULL)
-  {
+  
+  
     nodo->next=list->head;
      //if(list->head)
+     if(list->head!=NULL)
     list->head->prev = nodo;
     list->tail = nodo;
     list->head = nodo;
     nodo->prev = NULL;
     printf("*ENTRO*");
-  }/*
+  /*
   else
   {
     list->head=nodo;
