@@ -131,6 +131,7 @@ void pushCurrent(List * list, const void * data) {
     }
     else
     {
+      printf("*ENTRO*");
       nodo->next= list->current;
       nodo->prev = list->current->prev;
       if(list->current)
