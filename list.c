@@ -78,7 +78,7 @@ void pushFront(List * list, const void * data) {
   else
   {
       nodo->next=list->head;
-        if(list->head)
+      if(list->head)
       list->head->prev = nodo;
       list->tail = nodo;
       list->head = nodo;
@@ -108,16 +108,22 @@ void pushCurrent(List * list, const void * data) {
   Node *nodo = createNode(data);
   if( list->current == list->tail)
   {
+    list->tail->next=nodo;
+    nodo->next=NULL;
+    nodo->prev=list->tail;
+    list->tail=nodo;
+    /*
     nodo->prev = list->tail;
     if(list->tail)
     list->tail->next = nodo;
     list->tail=nodo;
-    nodo->next=NULL;
+    nodo->next=NULL;*/
   }
   else
   {
     if(list->current == list->head)
     {
+      printf("*ENTRO*");
       pushFront(list,data);
     }
     else
