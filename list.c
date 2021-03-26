@@ -76,7 +76,8 @@ void pushFront(List * list, const void * data) {
     list->head->prev = nodo;
     if(list->tail!=NULL)
     list->tail->prev = nodo;
-    list->tail = nodo;
+
+    list->tail = list->head;
     list->head = nodo;
     nodo->prev = NULL;
     printf("*ENTRO*");
