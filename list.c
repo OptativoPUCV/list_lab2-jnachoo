@@ -103,12 +103,6 @@ void pushCurrent(List * list, const void * data) {
     list->tail=nodo;
     nodo->next=NULL;
     printf("*ENTRO1*");
-    /*
-    nodo->prev = list->tail;
-    if(list->tail)
-    list->tail->next = nodo;
-    list->tail=nodo;
-    nodo->next=NULL;*/
   }
   else
   {
@@ -117,9 +111,7 @@ void pushCurrent(List * list, const void * data) {
     if(list->current)
     list->current->next = nodo;
     list->current=nodo;
-      
   }
- 
 }
 
 
@@ -134,7 +126,14 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  //if()
+  if(list->current == list->tail)
+  {
+    list->tail->prev->next = NULL;
+  }
+  if(list->current == list->head)
+  {
+    list->head->next->prev = NULL;
+  }
     return NULL;
 }
 
