@@ -114,7 +114,7 @@ void pushCurrent(List * list, const void * data) {
     nodo->next=NULL;
     nodo->prev=list->tail;
     list->tail=nodo;
-    printf("*ENTRO*");
+    printf("*ENTRO1*");
     /*
     nodo->prev = list->tail;
     if(list->tail)
@@ -126,12 +126,12 @@ void pushCurrent(List * list, const void * data) {
   {
     if(list->current == list->head)
     {
-      printf("*ENTRO*");
+      printf("*ENTRO2*");
       pushFront(list,data);
     }
     else
     {
-      printf("*ENTRO55*");
+      printf("*ENTRO3*");
       nodo->next= list->current;
       nodo->prev = list->current->prev;
       if(list->current)
