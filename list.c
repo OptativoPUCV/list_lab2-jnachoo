@@ -112,6 +112,7 @@ void pushCurrent(List * list, const void * data) {
     nodo->next=NULL;
     nodo->prev=list->tail;
     list->tail=nodo;
+    printf("*ENTRO*");
     /*
     nodo->prev = list->tail;
     if(list->tail)
