@@ -128,7 +128,7 @@ void pushCurrent(List * list, const void * data) {
     if(list->current == list->head)
     {
       printf("*ENTRO2*");
-      firstList(list);
+      //firstList(list);
       pushFront(list,data);
     }
     else
