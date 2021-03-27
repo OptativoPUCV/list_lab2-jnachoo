@@ -139,6 +139,7 @@ void * popCurrent(List * list) {
   }
   list->current = list->head->next;
   //list->current->next = NULL;
+  printf("*ENTRO3*");
   list->current->next = list->head->next->next;
   list->head->prev = NULL;
   list->head = list->head->next; 
