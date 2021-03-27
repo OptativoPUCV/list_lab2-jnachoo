@@ -126,6 +126,23 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  Node *nodo = malloc(sizeof(Node));
+  if(list->current == list->head)
+  {
+    list->head = list->head->next;
+    list->head->prev = NULL;
+  }
+  if(list->current == list->tail)
+  {
+    nodo->next = NULL;
+    list->tail = nodo;
+  }
+  else 
+  {
+    nodo->next = list->current->next;
+    list->current->next->prev = nodo;
+  }
+  /*
   if(list->current == list->tail)
   {
     list->current = list->tail->prev;
@@ -137,6 +154,7 @@ void * popCurrent(List * list) {
     printf("*ENTRO*");
     return list->tail->next;
   }
+  
   list->current = list->head->next;
   list->current->prev = NULL;
   printf("*ENTRO3*");
@@ -144,6 +162,7 @@ void * popCurrent(List * list) {
   //list->head->prev = NULL;
   list->head = list->head->next; 
   list->head->next = list->current->next;
+  return list->head;*/
   return list->head;
 }
 
