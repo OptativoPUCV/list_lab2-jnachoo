@@ -143,45 +143,6 @@ void * popCurrent(List * list) {
   {
     list->tail = list->current->prev;
   }
-
-  /*
-  if(list->current == list->head)
-  {
-    
-    list->head = list->head->next;
-    list->head->prev = NULL;
-  }
-  if(list->current == list->tail)
-  {
-    nodo->next = NULL;
-    list->tail = nodo;
-  }
-  else 
-  {
-    nodo->next = list->current->next;
-    list->current->next->prev = nodo;
-  }*/
-  /*
-  if(list->current == list->tail)
-  {
-    list->current = list->tail->prev;
-    list->current->next = NULL;
-    list->current->prev = list->tail->prev->prev;
-    list->tail->next = list->tail;
-    list->tail = list->tail->prev; 
-    list->tail->prev = list->current->prev;
-    printf("*ENTRO*");
-    return list->tail->next;
-  }
-  
-  list->current = list->head->next;
-  list->current->prev = NULL;
-  printf("*ENTRO3*");
-  list->current->next = list->head->next->next;
-  //list->head->prev = NULL;
-  list->head = list->head->next; 
-  list->head->next = list->current->next;
-  return list->head;*/
   return (void*)list->current->data;
 }
 
