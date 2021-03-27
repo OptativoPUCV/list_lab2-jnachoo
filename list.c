@@ -144,7 +144,7 @@ void * popCurrent(List * list) {
   //list->head->prev = NULL;
   list->head = list->head->next; 
   list->head->next = list->current->next;
-  return list->head;
+  return list->current;
 }
 
 void cleanList(List * list) {
