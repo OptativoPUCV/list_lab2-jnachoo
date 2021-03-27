@@ -126,9 +126,24 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  Node *nodo = malloc(sizeof(Node));
+  //Node *nodo = malloc(sizeof(Node));
+  if(list->current->prev != NULL)
+  {
+    list->current->prev->next = list->current->next;
+  }
+  else
+  {
+    list->head = list->current->next;
+  }
+  if(list->current->next != NULL)
+  {
+    list->current->next->prev = list->current->prev;
+  }
+
+  /*
   if(list->current == list->head)
   {
+    
     list->head = list->head->next;
     list->head->prev = NULL;
   }
@@ -141,7 +156,7 @@ void * popCurrent(List * list) {
   {
     nodo->next = list->current->next;
     list->current->next->prev = nodo;
-  }
+  }*/
   /*
   if(list->current == list->tail)
   {
