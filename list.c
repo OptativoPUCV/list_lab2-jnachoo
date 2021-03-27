@@ -178,7 +178,7 @@ void * popCurrent(List * list) {
   list->head = list->head->next; 
   list->head->next = list->current->next;
   return list->head;*/
-  return list->current->prev->prev;
+  return list->current->prev->next;
 }
 
 void cleanList(List * list) {
